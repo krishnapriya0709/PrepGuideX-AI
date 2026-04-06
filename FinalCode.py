@@ -161,8 +161,6 @@ if generate_clicked:
         if extracted:
             text += extracted
 
-    text = text[:5000]
-
     style = ""
     if level == "Beginner":
         style = "Explain simply."
@@ -185,8 +183,12 @@ if generate_clicked:
             st.stop()
         prompt = f"{style}\n{text}\nQuestion: {user_q}"
 
+    progress = st.progress(0)
+
     with st.spinner("Extracting insights…"):
+        progress.progress(30)
         response = llm.invoke(prompt)
+        progress.progress(100)
 
     st.markdown("---")
     st.subheader(option)
