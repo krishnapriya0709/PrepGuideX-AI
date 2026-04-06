@@ -161,6 +161,8 @@ if generate_clicked:
         if extracted:
             text += extracted
 
+    text = text[:5000]
+
     style = ""
     if level == "Beginner":
         style = "Explain simply."
