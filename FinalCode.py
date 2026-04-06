@@ -192,6 +192,8 @@ if generate_clicked:
         response = llm.invoke(prompt)
         progress.progress(100)
 
+    progress.empty()
+
     st.markdown("---")
     st.subheader(option)
     st.write(response.content)
