@@ -22,3 +22,11 @@ An AI-powered PDF assistant that helps users analyze documents and generate insi
 
 ---
 
+## 📸 Screenshots
+
+### User Interface
+![UI](ui.png)
+
+### Output Result
+![Output](output.png)
+
